@@ -1,0 +1,124 @@
+body {
+    background: linear-gradient(to bottom, #009688 0%, #009688 15%, #DBDBD2 15%, #DBDBD2 100%);
+    height: 100vh;
+}
+
+img{
+    max-width: 100%;
+}
+
+p{
+    margin: 0;
+}
+
+.container-app{
+    width: 1200px;
+    height: 90vh;
+    margin: auto;
+    background-color: #f3eeea;
+}
+
+
+.contacts{
+    height: 90vh;
+    background-color: white;
+    width: 500px ;
+}
+
+.avatar{
+    background-color: #eaeaea;
+    display: flex;
+    justify-content: space-between;
+    border-right: 1px solid gray;
+}
+
+.avatar img{
+    border-radius: 50%;
+    height: 60px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.user{
+    line-height: 80px;
+    font-weight: bold;
+}
+
+.icons{
+    color: gray;
+    font-size: 1.25rem;
+    margin-right: 1rem;
+}
+
+#alert-message{
+    background-color: #8edafc;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+}
+
+.message{
+    line-height: 15px;
+}
+
+.message p{
+    font-weight: 700;
+}
+
+.message a{
+    color: gray;
+    font-size: .8rem;
+}
+
+.bell-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #8edafc;
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+#search-contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.input-group{
+    width: 90%;
+}
+
+.aside{
+    height: 57vh;
+    overflow: auto;
+}
+
+.container_avatar:first-child{
+    background-color: #eaeaea;
+}
+
+.container_avatar{
+    border-top: .5px solid lightgrey;
+    border-bottom: .5px solid lightgrey;
+}
+
+.container_avatar>span{
+    font-size: .8rem;
+    margin-right: 5px;
+    margin-top: 10px;
+}
+
+.avatars img{
+    border-radius: 50%;
+    height: 60px;
+    margin: 10px 10px;
+}
+
+.last_message{
+    font-size: .8rem;
+}
+  

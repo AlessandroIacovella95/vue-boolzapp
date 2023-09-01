@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Boostrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <!-- Css -->
@@ -14,6 +16,129 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
-    <div class="container mt-5" id="app"></div>
+    <div class="container mt-5" id="app">
+        <div class="container-app">
+            <div class="contacts">
+                <div class="avatar">
+                    <div class="d-flex">
+                        <img src="img/avatar_io.jpg" alt="">
+                        <p class="ms-3 user">Sofia</p>
+                    </div>
+                    <div class="icons d-flex align-items-center gap-3">
+                        <i class="fa-solid fa-circle-notch"></i>
+                        <i class="fa-solid fa-message"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
+
+                <div id="alert-message">
+                    <div class="bell-icons ms-3">
+                        <i class="fa-solid fa-bell-slash"></i>
+                    </div>
+                    <div class="ms-3 message">
+                        <p>Ricevi notifiche di nuovi messaggi</p>
+                        <a href="#">Attiva notifiche desktop</a>
+                    </div>
+                </div>
+
+                <div id="search-contact">
+                    <div class="input-group flex-nowrap">
+                        <span class="input-group-text" id="addon-wrapping"><i class="fa-solid fa-magnifying-glass"></i></span>
+                        <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat" aria-label="Cerca o inizia una nuova chat" aria-describedby="addon-wrapping">
+                    </div>
+                </div>
+
+                <div class="aside">
+                    <div class="d-flex container_avatar">
+                        <div class="avatars">
+                            <img src="./img/avatar_1.jpg" alt="">
+                        </div>
+                        <div class="d-flex flex-column justify-content-center">
+                            <h6>Michele</h6>
+                            <span class="last_message">Ultimo messaggio inviato</span>
+                        </div>
+                        <span class="ms-auto">12:00</span>
+                    </div>
+
+                    <div class="d-flex container_avatar">
+                        <div class="avatars">
+                            <img src="./img/avatar_2.jpg" alt="">
+                        </div>
+                        <div class="d-flex flex-column justify-content-center">
+                            <h6>Fabio</h6>
+                            <span class="last_message">Ultimo messaggio inviato</span>
+                        </div>
+                        <span class="ms-auto">12:00</span>
+                    </div>
+
+                    <div class="d-flex container_avatar">
+                        <div class="avatars">
+                            <img src="./img/avatar_3.jpg" alt="">
+                        </div>
+                        <div class="d-flex flex-column justify-content-center">
+                            <h6>Samuele</h6>
+                            <span class="last_message">Ultimo messaggio inviato</span>
+                        </div>
+                        <span class="ms-auto">12:00</span>
+                    </div>
+
+                    <div class="d-flex container_avatar">
+                        <div class="avatars">
+                            <img src="./img/avatar_4.jpg" alt="">
+                        </div>
+                        <div class="d-flex flex-column justify-content-center">
+                            <h6>Alessandro B.</h6>
+                            <span class="last_message">Ultimo messaggio inviato</span>
+                        </div>
+                        <span class="ms-auto">12:00</span>
+                    </div>
+
+                    <div class="d-flex container_avatar">
+                        <div class="avatars">
+                            <img src="./img/avatar_5.jpg" alt="">
+                        </div>
+                        <div class="d-flex flex-column justify-content-center">
+                            <h6>Alessandro L.</h6>
+                            <span class="last_message">Ultimo messaggio inviato</span>
+                        </div>
+                        <span class="ms-auto">12:00</span>
+                    </div>
+
+                    <div class="d-flex container_avatar">
+                        <div class="avatars">
+                            <img src="./img/avatar_6.jpg" alt="">
+                        </div>
+                        <div class="d-flex flex-column justify-content-center">
+                            <h6>Claudia</h6>
+                            <span class="last_message">Ultimo messaggio inviato</span>
+                        </div>
+                        <span class="ms-auto">12:00</span>
+                    </div>
+
+                    <div class="d-flex container_avatar">
+                        <div class="avatars">
+                            <img src="./img/avatar_7.jpg" alt="">
+                        </div>
+                        <div class="d-flex flex-column justify-content-center">
+                            <h6>Federico</h6>
+                            <span class="last_message">Ultimo messaggio inviato</span>
+                        </div>
+                        <span class="ms-auto">12:00</span>
+                    </div>
+
+                    <div class="d-flex container_avatar">
+                        <div class="avatars">
+                            <img src="./img/avatar_8.jpg" alt="">
+                        </div>
+                        <div class="d-flex flex-column justify-content-center">
+                            <h6>Davide</h6>
+                            <span class="last_message">Ultimo messaggio inviato</span>
+                        </div>
+                        <span class="ms-auto">12:00</span>
+                    </div>
+                </div>
+            <div>
+        </div>
+    </div>
 </body>
 </html>
