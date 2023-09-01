@@ -1,6 +1,6 @@
 body {
     background: linear-gradient(to bottom, #009688 0%, #009688 15%, #DBDBD2 15%, #DBDBD2 100%);
-    height: 100vh;
+    height: 94vh;
 }
 
 img{
@@ -16,6 +16,7 @@ p{
     height: 90vh;
     margin: auto;
     background-color: #f3eeea;
+    display: flex;
 }
 
 
@@ -94,7 +95,7 @@ p{
 
 .aside{
     height: 57vh;
-    overflow: auto;
+    overflow-y: auto;
 }
 
 .container_avatar:first-child{
@@ -121,4 +122,62 @@ p{
 .last_message{
     font-size: .8rem;
 }
-  
+
+section{
+    width: 700px;
+}
+
+.chat_text{
+    height: 573px;
+    background-image: url('../img/mine.jpg');
+    overflow-y: auto;
+}
+
+.sent_message{
+    background-color: #D5F9BA;
+    white-space: nowrap;
+    margin-bottom: 10px;
+    padding: 15px 5px 0 10px;
+    width:250px;
+    font-size: .90rem;
+    border-radius: 10px;
+}
+
+.receveid_message{
+    background-color: #FFFFFF;
+    white-space: nowrap;
+    margin-bottom: 10px;
+    margin-left: 45px;
+    padding: 10px 5px 0 10px;
+    width:250px;
+    font-size: .90rem;
+    border-radius: 10px;
+}
+
+.sent_message >.time{
+    display: flex;
+    justify-content: flex-end;
+    font-size: .6rem;
+}
+
+.receveid_message >.time{
+    display: flex;
+    justify-content: flex-end;
+    font-size: .6rem;
+}
+
+.container_text{
+    width: 640px;
+    padding-top: 20px;
+}
+
+.writing_bar .icons{
+    font-size: 1.25rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    line-height: 52px;
+}
+
+.writing_bar .input-group{
+    width: 590px;
+}

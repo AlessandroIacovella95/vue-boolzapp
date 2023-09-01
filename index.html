@@ -16,10 +16,10 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
-    <div class="container mt-5" id="app">
-        <div class="container-app">
-            <div class="contacts">
-                <div class="avatar">
+    <div class="container-app mt-5" id="app">
+        
+        <div class="contacts">
+            <div class="avatar">
                     <div class="d-flex">
                         <img src="img/avatar_io.jpg" alt="">
                         <p class="ms-3 user">Sofia</p>
@@ -29,9 +29,9 @@
                         <i class="fa-solid fa-message"></i>
                         <i class="fa-solid fa-ellipsis-vertical"></i>
                     </div>
-                </div>
+            </div>
 
-                <div id="alert-message">
+            <div id="alert-message">
                     <div class="bell-icons ms-3">
                         <i class="fa-solid fa-bell-slash"></i>
                     </div>
@@ -39,16 +39,16 @@
                         <p>Ricevi notifiche di nuovi messaggi</p>
                         <a href="#">Attiva notifiche desktop</a>
                     </div>
-                </div>
+            </div>
 
-                <div id="search-contact">
+            <div id="search-contact">
                     <div class="input-group flex-nowrap">
                         <span class="input-group-text" id="addon-wrapping"><i class="fa-solid fa-magnifying-glass"></i></span>
                         <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat" aria-label="Cerca o inizia una nuova chat" aria-describedby="addon-wrapping">
                     </div>
-                </div>
+            </div>
 
-                <div class="aside">
+            <div class="aside">
                     <div class="d-flex container_avatar">
                         <div class="avatars">
                             <img src="./img/avatar_1.jpg" alt="">
@@ -136,9 +136,68 @@
                         </div>
                         <span class="ms-auto">12:00</span>
                     </div>
-                </div>
-            <div>
+            </div>
         </div>
+
+        <section>
+            <div class="chat_user">
+                <div class="d-flex align-items-center container_avatar">
+                    <div class="avatars">
+                        <img src="./img/avatar_1.jpg" alt="">
+                    </div>
+                    <div class="d-flex flex-column justify-content-center">
+                        <h6>Michele</h6>
+                        <span class="last_message">Ultimo messaggio inviato alle 12:00</span>
+                    </div>
+                    <div class="ms-auto fs-5 icons">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-paperclip mx-3"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="chat_text">
+                <div class="container_text">
+                    <div class="d-flex justify-content-end">
+                        <div class="sent_message">
+                            <p>Hai portato a spasso il cane?</p>
+                            <div class="time">
+                                <p>15:30</p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="d-flex justify-content-end">
+                        <div class="sent_message">
+                            <p>Ricordati di stendere i panni</p>
+                            <div class="time">
+                                <p>15:50</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex">
+                        <div class="receveid_message">
+                            <p>Tutto fatto!</p>
+                            <div class="time">
+                                <p>16:15</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="writing_bar d-flex">
+                <div class="icons">
+                    <i class="fa-regular fa-face-smile"></i>
+                </div>
+                <div class="input-group my-1">
+                    <input type="text" class="form-control" placeholder="Scrivi un messaggio" aria-label="Scrivi un messaggio" aria-describedby="basic-addon1">
+                </div>
+                <div class="icons">
+                    <i class="fa-solid fa-microphone"></i>
+                </div>
+            </div>
+        </section>
     </div>
 </body>
 </html>
