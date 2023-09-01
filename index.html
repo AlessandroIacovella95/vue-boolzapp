@@ -49,93 +49,16 @@
             </div>
 
             <div class="aside">
-                    <div class="d-flex container_avatar">
-                        <div class="avatars">
-                            <img src="./img/avatar_1.jpg" alt="">
-                        </div>
-                        <div class="d-flex flex-column justify-content-center">
-                            <h6>Michele</h6>
-                            <span class="last_message">Ultimo messaggio inviato</span>
-                        </div>
-                        <span class="ms-auto">12:00</span>
+                <div class="d-flex container_avatar" v-for="contact in contacts">
+                    <div class="avatars">
+                        <img :src="contact.avatar" alt="">
                     </div>
-
-                    <div class="d-flex container_avatar">
-                        <div class="avatars">
-                            <img src="./img/avatar_2.jpg" alt="">
-                        </div>
-                        <div class="d-flex flex-column justify-content-center">
-                            <h6>Fabio</h6>
-                            <span class="last_message">Ultimo messaggio inviato</span>
-                        </div>
-                        <span class="ms-auto">12:00</span>
+                    <div class="d-flex flex-column justify-content-center">
+                        <h6>{{contact.name}}</h6>
+                        <span class="last_message">Ultimo messaggio inviato</span>
                     </div>
-
-                    <div class="d-flex container_avatar">
-                        <div class="avatars">
-                            <img src="./img/avatar_3.jpg" alt="">
-                        </div>
-                        <div class="d-flex flex-column justify-content-center">
-                            <h6>Samuele</h6>
-                            <span class="last_message">Ultimo messaggio inviato</span>
-                        </div>
-                        <span class="ms-auto">12:00</span>
-                    </div>
-
-                    <div class="d-flex container_avatar">
-                        <div class="avatars">
-                            <img src="./img/avatar_4.jpg" alt="">
-                        </div>
-                        <div class="d-flex flex-column justify-content-center">
-                            <h6>Alessandro B.</h6>
-                            <span class="last_message">Ultimo messaggio inviato</span>
-                        </div>
-                        <span class="ms-auto">12:00</span>
-                    </div>
-
-                    <div class="d-flex container_avatar">
-                        <div class="avatars">
-                            <img src="./img/avatar_5.jpg" alt="">
-                        </div>
-                        <div class="d-flex flex-column justify-content-center">
-                            <h6>Alessandro L.</h6>
-                            <span class="last_message">Ultimo messaggio inviato</span>
-                        </div>
-                        <span class="ms-auto">12:00</span>
-                    </div>
-
-                    <div class="d-flex container_avatar">
-                        <div class="avatars">
-                            <img src="./img/avatar_6.jpg" alt="">
-                        </div>
-                        <div class="d-flex flex-column justify-content-center">
-                            <h6>Claudia</h6>
-                            <span class="last_message">Ultimo messaggio inviato</span>
-                        </div>
-                        <span class="ms-auto">12:00</span>
-                    </div>
-
-                    <div class="d-flex container_avatar">
-                        <div class="avatars">
-                            <img src="./img/avatar_7.jpg" alt="">
-                        </div>
-                        <div class="d-flex flex-column justify-content-center">
-                            <h6>Federico</h6>
-                            <span class="last_message">Ultimo messaggio inviato</span>
-                        </div>
-                        <span class="ms-auto">12:00</span>
-                    </div>
-
-                    <div class="d-flex container_avatar">
-                        <div class="avatars">
-                            <img src="./img/avatar_8.jpg" alt="">
-                        </div>
-                        <div class="d-flex flex-column justify-content-center">
-                            <h6>Davide</h6>
-                            <span class="last_message">Ultimo messaggio inviato</span>
-                        </div>
-                        <span class="ms-auto">12:00</span>
-                    </div>
+                    <span class="ms-auto">12:00</span>
+                </div>
             </div>
         </div>
 
