@@ -198,13 +198,26 @@ createApp({
 
         sendMessage(){
             const selectedContact = this.contacts[this.activeIndex];
+            if (this.newMessage == '') {
+                return
+            } 
+
             selectedContact.messages.push({
-                date:this.getNow(),
-                message: this.newMessage,
-                status: "sent",
+                    date:this.getNow(),
+                    message: this.newMessage,
+                    status: "sent",
             });
+            
 
             this.newMessage='';
+
+            setTimeout(()=>{
+                selectedContact.messages.push({
+                    date:this.getNow(),
+                    message: 'Ok!',
+                    status: "received",
+                });
+            },2000);  
         },
 
         getNow(){
