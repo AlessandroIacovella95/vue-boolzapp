@@ -96,7 +96,7 @@
                     <i class="fa-regular fa-face-smile"></i>
                 </div>
                 <div class="input-group my-1">
-                    <input type="text" class="form-control" placeholder="Scrivi un messaggio" aria-label="Scrivi un messaggio" aria-describedby="basic-addon1">
+                    <input @keyup.enter="sendMessage()" v-model="newMessage" type="text" class="form-control" placeholder="Scrivi un messaggio" aria-label="Scrivi un messaggio" aria-describedby="basic-addon1">
                 </div>
                 <div class="icons">
                     <i class="fa-solid fa-microphone"></i>

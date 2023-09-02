@@ -3,6 +3,7 @@ const { createApp } = Vue
 createApp({
     data() {
       return {
+        newMessage: '',
         activeIndex: 0,
         contacts: [
             {
@@ -193,6 +194,32 @@ createApp({
     methods: {
         activeContact(index){
             this.activeIndex = index;
+        },
+
+        sendMessage(){
+            const selectedContact = this.contacts[this.activeIndex];
+            selectedContact.messages.push({
+                date:this.getNow(),
+                message: this.newMessage,
+                status: "sent",
+            });
+
+            this.newMessage='';
+        },
+
+        getNow(){
+            const now = new Date();    
+            const hours = this.formatDate(now.getHours());
+            const minutes = this.formatDate(now.getMinutes());
+            const seconds = this.formatDate(now.getSeconds());
+            const day = this.formatDate(now.getDay());
+            const month = this.formatDate(now.getMonth() +1 );
+            const year = this.formatDate(now.getFullYear());
+            return `${day}/${month}/${year} ${hours}:${minutes}:${seconds}`
+        },
+    
+        formatDate(datePart){
+            return datePart < 10 ? '0' + datePart : datePart;
         }
     }
 
