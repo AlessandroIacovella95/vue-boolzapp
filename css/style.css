@@ -5,6 +5,11 @@ body {
 
 img{
     max-width: 100%;
+    cursor: pointer;
+}
+
+i{
+    cursor: pointer;
 }
 
 p{
@@ -38,6 +43,7 @@ p{
     height: 60px;
     margin-left: 10px;
     margin-top: 10px;
+    cursor: pointer;
 }
 
 .user{
@@ -106,6 +112,7 @@ p{
     border-top: .5px solid lightgrey;
     border-bottom: .5px solid lightgrey;
     cursor: pointer;
+    display: flex;
 }
 
 .container_avatar>span{
@@ -179,4 +186,8 @@ section{
 
 .writing_bar .input-group{
     width: 590px;
+}
+
+#addon-wrapping{
+    cursor: pointer;
 }

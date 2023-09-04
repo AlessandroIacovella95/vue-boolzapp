@@ -3,6 +3,7 @@ const { createApp } = Vue
 createApp({
     data() {
       return {
+        searchUser:'',
         newMessage: '',
         activeIndex: 0,
         contacts: [
@@ -197,14 +198,14 @@ createApp({
         },
 
         sendMessage(){
-            const selectedContact = this.contacts[this.activeIndex];
+            const selectedContact = this.filterContact()[this.activeIndex];
             if (this.newMessage == '') {
                 return
             } 
 
             selectedContact.messages.push({
                     date:this.getNow(),
-                    message: this.newMessage,
+                    message: this.newMessage.trim(),
                     status: "sent",
             });
             
@@ -217,7 +218,7 @@ createApp({
                     message: 'Ok!',
                     status: "received",
                 });
-            },2000);  
+            },1000);  
         },
 
         getNow(){
@@ -233,7 +234,16 @@ createApp({
     
         formatDate(datePart){
             return datePart < 10 ? '0' + datePart : datePart;
+        },
+
+        searchContact(searchUser) {
+            const userInputText = searchUser.trim().toLowerCase();
+        
+            for (const Textpart of this.contacts) {
+                Textpart.visible = Textpart.name.toLowerCase().includes(userInputText);
+            }
         }
+        
     }
 
 }).mount('#app')

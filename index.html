@@ -42,14 +42,14 @@
             </div>
 
             <div id="search-contact">
-                    <div class="input-group flex-nowrap">
-                        <span class="input-group-text" id="addon-wrapping"><i class="fa-solid fa-magnifying-glass"></i></span>
-                        <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat" aria-label="Cerca o inizia una nuova chat" aria-describedby="addon-wrapping">
-                    </div>
+                <div class="input-group flex-nowrap">
+                    <span class="input-group-text" id="addon-wrapping"><i class="fa-solid fa-magnifying-glass"></i></span>
+                    <input v-model="searchUser" @keyup="searchContact(searchUser)" type="text" class="form-control" placeholder="Cerca o inizia una nuova chat" aria-label="Cerca o inizia una nuova chat" aria-describedby="addon-wrapping">
+                </div>
             </div>
 
             <div class="aside">
-                <div class="d-flex container_avatar" v-for="(contact, index) in contacts" :class="{ active: index == activeIndex }" @click="activeContact(index)">
+                <div class="container_avatar" v-for="(contact, index) in contacts" :class="{ active: index == activeIndex }" @click="activeContact(index)" v-show="contact.visible">
                     <div class="avatars">
                         <img :src="contact.avatar" alt="">
                     </div>
