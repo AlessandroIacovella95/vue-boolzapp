@@ -198,7 +198,7 @@ createApp({
         },
 
         sendMessage(){
-            const selectedContact = this.filterContact()[this.activeIndex];
+            const selectedContact = this.contacts[this.activeIndex];
             if (this.newMessage == '') {
                 return
             } 
