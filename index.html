@@ -16,14 +16,19 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
+    <!-- Container principale -->
     <div class="container-app mt-5" id="app">
-        
+        <!-- Contanti -->
         <div class="contacts">
+            <!-- Avatar principale -->
             <div class="avatar">
                     <div class="d-flex">
+                        <!-- Immagine avatar principale -->
                         <img src="img/avatar_io.jpg" alt="">
+                        <!-- Nome avatar principale -->
                         <p class="ms-3 user">Sofia</p>
                     </div>
+                    <!-- Icone avatar principale -->
                     <div class="icons d-flex align-items-center gap-3">
                         <i class="fa-solid fa-circle-notch"></i>
                         <i class="fa-solid fa-message"></i>
@@ -31,47 +36,60 @@
                     </div>
             </div>
 
+            <!-- Messaggio -->
             <div id="alert-message">
-                    <div class="bell-icons ms-3">
-                        <i class="fa-solid fa-bell-slash"></i>
-                    </div>
-                    <div class="ms-3 message">
-                        <p>Ricevi notifiche di nuovi messaggi</p>
-                        <a href="#">Attiva notifiche desktop</a>
-                    </div>
+                <!-- Icona campanella -->
+                <div class="bell-icons ms-3">
+                    <i class="fa-solid fa-bell-slash"></i>
+                </div>
+                <!-- Messaggio notifiche -->
+                <div class="ms-3 message">
+                    <p>Ricevi notifiche di nuovi messaggi</p>
+                    <a href="#">Attiva notifiche desktop</a>
+                </div>
             </div>
-
+            <!-- Input -->
             <div id="search-contact">
                 <div class="input-group flex-nowrap">
                     <span class="input-group-text" id="addon-wrapping"><i class="fa-solid fa-magnifying-glass"></i></span>
                     <input v-model="searchUser" @keyup="searchContact(searchUser)" type="text" class="form-control" placeholder="Cerca o inizia una nuova chat" aria-label="Cerca o inizia una nuova chat" aria-describedby="addon-wrapping">
                 </div>
             </div>
-
+            
+            <!-- Lista contatti -->
             <div class="aside">
+                <!-- Ciclo FOR per generare dinamicamente i contatti -->
                 <div class="container_avatar" v-for="(contact, index) in contacts" :class="{ active: index == activeIndex }" @click="activeContact(index)" v-show="contact.visible">
                     <div class="avatars">
+                        <!-- Immagini dei contatti -->
                         <img :src="contact.avatar" alt="">
                     </div>
                     <div class="d-flex flex-column justify-content-center">
+                        <!-- Nome dei contatti -->
                         <h6>{{contact.name}}</h6>
                         <span class="last_message">Ultimo messaggio inviato</span>
                     </div>
-                    <span class="ms-auto">12:00</span>
+                    <!-- Orario -->
+                    <span class="ms-auto">{{lastAccess()}}</span>
                 </div>
             </div>
         </div>
 
         <section>
+            <!-- Chat-User -->
             <div class="chat_user">
                 <div class="d-flex align-items-center container_avatar">
                     <div class="avatars">
+                        <!-- Immagine avatar corrispondente -->
                         <img :src="contacts[activeIndex].avatar" :alt="contacts[activeIndex.name]">
                     </div>
+                    <!-- Nome avatar corrispondente -->
                     <div class="d-flex flex-column justify-content-center">
                         <h6>{{ contacts[activeIndex].name }}</h6>
-                        <span class="last_message">Ultimo messaggio inviato alle 12:00</span>
+                        <!-- Ultimo accesso aggiornato -->
+                        <span class="last_message">{{"Ultimo accesso alle " + lastAccess()}}</span>
                     </div>
+                    <!-- Icone chat -->
                     <div class="ms-auto fs-5 icons">
                         <i class="fa-solid fa-magnifying-glass"></i>
                         <i class="fa-solid fa-paperclip mx-3"></i>
@@ -79,9 +97,12 @@
                     </div>
                 </div>
             </div>
+            <!-- Chat-Text -->
             <div class="chat_text">
                 <div class="container_text">
+                    <!-- Ciclo for per generare i messagi all'interno della chat -->
                     <div class="d-flex" v-for="message in contacts[activeIndex].messages">
+                        <!-- In base allo status assegnazione di una classe -->
                         <div :class="[(message.status =='sent') ? 'ms-auto' : '', message.status + '_message']">
                             <p>{{message.message}}</p>
                             <div class="time">
@@ -91,13 +112,17 @@
                     </div>
                 </div>
             </div>
+            <!-- Input chat -->
             <div class="writing_bar d-flex">
+                <!-- Icona Smile -->
                 <div class="icons">
                     <i class="fa-regular fa-face-smile"></i>
                 </div>
+                <!-- Inpute con invocazione funzione per mandare un messaggio -->
                 <div class="input-group my-1">
                     <input @keyup.enter="sendMessage()" v-model="newMessage" type="text" class="form-control" placeholder="Scrivi un messaggio" aria-label="Scrivi un messaggio" aria-describedby="basic-addon1">
                 </div>
+                <!-- Icona microfono -->
                 <div class="icons">
                     <i class="fa-solid fa-microphone"></i>
                 </div>

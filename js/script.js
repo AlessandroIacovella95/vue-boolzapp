@@ -193,10 +193,12 @@ createApp({
     },
 
     methods: {
+        // * Funziona per definire il contatto attivo
         activeContact(index){
             this.activeIndex = index;
         },
-
+        
+        // * Funzione per inviare un nuovo messaggio
         sendMessage(){
             const selectedContact = this.contacts[this.activeIndex];
             if (this.newMessage == '') {
@@ -211,7 +213,8 @@ createApp({
             
 
             this.newMessage='';
-
+            
+            // * Risposta dopo 1 Sec da parte del destinatario
             setTimeout(()=>{
                 selectedContact.messages.push({
                     date:this.getNow(),
@@ -221,6 +224,7 @@ createApp({
             },1000);  
         },
 
+        // * Funzione per generare la data e orario odierno per i nuovi messaggi
         getNow(){
             const now = new Date();    
             const hours = this.formatDate(now.getHours());
@@ -231,11 +235,21 @@ createApp({
             const year = this.formatDate(now.getFullYear());
             return `${day}/${month}/${year} ${hours}:${minutes}:${seconds}`
         },
-    
+        
+         // * Funzione per generare l'orario dell'ultimo accesso degli utenti
+        lastAccess(){
+            const now = new Date();    
+            const hours = this.formatDate(now.getHours());
+            const minutes = this.formatDate(now.getMinutes());
+            return `${hours}:${minutes}`
+        },
+
+        // * Funzione per formattare correttamente la data
         formatDate(datePart){
             return datePart < 10 ? '0' + datePart : datePart;
         },
-
+        
+        // * Funzione per ricercare in base al testo scritto in input un determinato utente
         searchContact(searchUser) {
             const userInputText = searchUser.trim().toLowerCase();
         
